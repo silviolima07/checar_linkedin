@@ -15,7 +15,7 @@ def criar_task_analise(revisor_link):
         name='analise',
         description=(
             """
-             Usar a ferramenta de leitura para ler o arquivo {profile}.
+             Usar o arquivo {profile}.
              Numa escala de 0 a 10, onde 0 é a menor importância e 10 a maior importância.  
              Avaliar o arquivo lido e apresentar uma nota.            
              Analisar o texto do perfil do usuário  e recomende melhorias.

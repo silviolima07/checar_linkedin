@@ -3,7 +3,7 @@ import streamlit as st
 from crewai import Crew, Process
 from my_agents import criar_agente_revisor
 from my_tasks import criar_task_analise
-from my_tools import save_uploaded_pdf
+from my_tools import save_uploaded_pdf, read_txt
 from config_llm import llama_groq
 import pdfplumber
 import os
@@ -90,9 +90,12 @@ if option == 'Profile':
         
         with open("profile.txt", "rb") as f:
             raw_data = f.read()
+        
 
         result_char = chardet.detect(raw_data)
         encoding = result_char['encoding']
+        
+        file_txt = read_txt('profile.txt', encoding)
         
         
         # Configuração da crew com o agente recrutador
@@ -114,6 +117,7 @@ if option == 'Profile':
         if st.button("INICIAR"):
                 inputs = {
                       'profile': 'profile.txt',
+                      'profile': file_txt,
                       'encoding': encoding,
                       'sugestao': 'sugestao_profile.md'}
                       
