@@ -85,12 +85,12 @@ if option == 'Profile':
             # Salvar PDF e extrair texto
             
             save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
-            st.write("Arquivo lido")
+            st.write("Arquivo lido com sucesso")
         
             # Extrair texto do PDF
             text_content = extract_text_from_pdf(uploaded_file)
             save_to_txt(text_content, 'profile.txt')  # save txt
-            st.write("Arquivo salvo")
+            st.write("Arquivo salvo com sucesso")
         
             with open("profile.txt", "rb") as f:
                 raw_data = f.read()
@@ -164,7 +164,7 @@ if option == 'Profile':
         else:
             st.markdown("##### Formato PDF")        
     except:
-        st.error("Verifique o arquivo enviado. Deve ser o profile gerado no Linkedin.")
+        st.error("Houston, we have a problem. Verifique o arquivo enviado. Deve ser o profile gerado no Linkedin.")
 if option == 'About':
     robo = Image.open("img/get_profile.png")
     st.sidebar.image(robo,caption="",use_column_width=True)
