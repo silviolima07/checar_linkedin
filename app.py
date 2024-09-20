@@ -83,11 +83,14 @@ if option == 'Profile':
         uploaded_file = st.file_uploader("Envie o seu profile em PDF", type=["pdf"])
         if uploaded_file is not None:
             # Salvar PDF e extrair texto
+            
             save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
+            st.write("Arquivo lido")
         
             # Extrair texto do PDF
             text_content = extract_text_from_pdf(uploaded_file)
             save_to_txt(text_content, 'profile.txt')  # save txt
+            st.write("Arquivo salvo")
         
             with open("profile.txt", "rb") as f:
                 raw_data = f.read()
