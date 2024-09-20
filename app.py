@@ -85,12 +85,12 @@ if option == 'Profile':
             # Salvar PDF e extrair texto
             
             save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
-            st.write("Arquivo lido com sucesso")
+            #st.write("Arquivo lido com sucesso")
         
             # Extrair texto do PDF
             text_content = extract_text_from_pdf(uploaded_file)
             save_to_txt(text_content, 'profile.txt')  # save txt
-            st.write("Arquivo salvo com sucesso")
+            st.write("Arquivo lido e salvo com sucesso")
         
             with open("profile.txt", "rb") as f:
                 raw_data = f.read()
