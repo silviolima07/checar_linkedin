@@ -3,14 +3,6 @@ from crewai_tools import FileReadTool
 #from app import modelo
 import streamlit as st
 
-import chardet
-
-with open("arquivo.txt", "rb") as f:
-    raw_data = f.read()
-
-result = chardet.detect(raw_data)
-encoding = result['encoding']
-
 
 # Ferramenta para leitura de arquivo cv.txt
 reader_tool = FileReadTool()

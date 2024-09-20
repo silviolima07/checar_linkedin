@@ -10,6 +10,9 @@ import os
 from PIL import Image
 import time
 
+import chardet
+
+
 
 # Criando o checkbox para mostrar ou não os comandos das tasks
 #mostrar_comandos = st.checkbox("Mostrar progresso das tarefas em execução", value=True)
@@ -85,6 +88,12 @@ if option == 'Profile':
         text_content = extract_text_from_pdf(uploaded_file)
         save_to_txt(text_content, 'profile.txt')  # save txt
         
+        with open("profile.txt", "rb") as f:
+        raw_data = f.read()
+
+        result_char = chardet.detect(raw_data)
+        encoding = result_char['encoding']
+        
         
         # Configuração da crew com o agente recrutador
         revisor_link = criar_agente_revisor(modelo)
@@ -105,6 +114,7 @@ if option == 'Profile':
         if st.button("INICIAR"):
                 inputs = {
                       'profile': './profile.txt',
+                      'encoding': encoding,
                       'sugestao': 'sugestao_profile.md'}
                       
                 with st.spinner('Wait for it...we are working...please'):
