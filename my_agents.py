@@ -3,7 +3,13 @@ from crewai_tools import FileReadTool
 #from app import modelo
 import streamlit as st
 
+import chardet
 
+with open("arquivo.txt", "rb") as f:
+    raw_data = f.read()
+
+result = chardet.detect(raw_data)
+encoding = result['encoding']
 
 
 # Ferramenta para leitura de arquivo cv.txt
@@ -15,7 +21,7 @@ def criar_agente_revisor(modelo):
     
     revisor_link = Agent(
         role="revisor",
-        goal="Ler o arquivo {profile} com a ferramenta de leitura."
+        goal="Ler o arquivo {profile} com a ferramenta de leitura usando {encoding}."
              " Recomendar melhorias no texto do perfil do usuario no linkedin.",
         backstory=
             "Você é um experiente recrutador atualizado com os critérios de busca feitos pelos recrutadores. "
