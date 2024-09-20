@@ -89,7 +89,7 @@ if option == 'Profile':
         save_to_txt(text_content, 'profile.txt')  # save txt
         
         with open("profile.txt", "rb") as f:
-        raw_data = f.read()
+            raw_data = f.read()
 
         result_char = chardet.detect(raw_data)
         encoding = result_char['encoding']
