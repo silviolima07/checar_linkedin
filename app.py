@@ -27,7 +27,8 @@ def executar_tarefas(crew, inputs):
         task_name = (task.name).upper()  # Nome da tasks, definido tem my_tasks
         st.write(f"Agent : **{task_agent}**")  # Mostra o nome do agent
         st.write(f"Executando task : **{task_name}**")  # Mostra o nome da task
-        st.write(f"Descrição: {task.description}")
+        st.write(f"Descrição:")
+        st.write(f"{task.description}")
         time.sleep(2)  # Simula o tempo de execução da task
         # Aqui você pode simular o progresso de cada task, ou capturar a execução real
 
