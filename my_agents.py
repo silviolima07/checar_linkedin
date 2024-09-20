@@ -24,7 +24,7 @@ def criar_agente_revisor(modelo):
         ,
         llm=modelo,
         verbose=True,
-        memory=False
+        memory=False,
         tools=[]
     )
     return revisor_link    
