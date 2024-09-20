@@ -113,7 +113,7 @@ if option == 'Profile':
 
         if st.button("INICIAR"):
                 inputs = {
-                      'profile': './profile.txt',
+                      'profile': 'profile.txt',
                       'encoding': encoding,
                       'sugestao': 'sugestao_profile.md'}
                       
