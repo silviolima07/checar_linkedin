@@ -5,7 +5,7 @@ import streamlit as st
 
 
 # Ferramenta para leitura de arquivo cv.txt
-reader_tool = FileReadTool()
+#reader_tool = FileReadTool()
 
 # Configuração do agente
 
@@ -25,7 +25,7 @@ def criar_agente_revisor(modelo):
         llm=modelo,
         verbose=True,
         memory=False
-        #tools=[reader_tool]
+        tools=[]
     )
     return revisor_link    
  
