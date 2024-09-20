@@ -23,9 +23,6 @@ def save_uploaded_pdf(uploaded_file, destination_path):
     
     
 def read_txt(file_path, encoding):
-    """
-    Leitura de arquivo txt
-    """
     with open(file_path, "r", encoding=encoding) as f:
         conteudo = f.read() 
     return conteudo        
