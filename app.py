@@ -78,35 +78,36 @@ st.sidebar.markdown("# Menu")
 option = st.sidebar.selectbox("Menu", ["Profile", 'About'], label_visibility='hidden')
 
 if option == 'Profile':
-    st.markdown("## Upload Profile Linkedin")
-    uploaded_file = st.file_uploader("Envie o seu profile em PDF", type=["pdf"])
-    if uploaded_file is not None:
-        # Salvar PDF e extrair texto
-        save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
+    try:
+        st.markdown("## Upload Profile Linkedin")
+        uploaded_file = st.file_uploader("Envie o seu profile em PDF", type=["pdf"])
+        if uploaded_file is not None:
+            # Salvar PDF e extrair texto
+            save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
         
-        # Extrair texto do PDF
-        text_content = extract_text_from_pdf(uploaded_file)
-        save_to_txt(text_content, 'profile.txt')  # save txt
+            # Extrair texto do PDF
+            text_content = extract_text_from_pdf(uploaded_file)
+            save_to_txt(text_content, 'profile.txt')  # save txt
         
-        with open("profile.txt", "rb") as f:
-            raw_data = f.read()
+            with open("profile.txt", "rb") as f:
+                raw_data = f.read()
         
 
-        result_char = chardet.detect(raw_data)
-        encoding = result_char['encoding']
+            result_char = chardet.detect(raw_data)
+            encoding = result_char['encoding']
         
-        file_txt = read_txt('profile.txt', encoding)
+            file_txt = read_txt('profile.txt', encoding)
         
         
-        # Configuração da crew com o agente recrutador
-        revisor_link = criar_agente_revisor(modelo)
-        # Cria a task usando o agente criado
-        analise = criar_task_analise(revisor_link)
+            # Configuração da crew com o agente recrutador
+            revisor_link = criar_agente_revisor(modelo)
+            # Cria a task usando o agente criado
+            analise = criar_task_analise(revisor_link)
         
-        st.markdown("## Analisar Perfil no Linkedin")   
-        st.info("#### Avalie sempre a resposta final. O agente tem razão ou não?")
+            st.markdown("## Analisar Perfil no Linkedin")   
+            st.info("#### Avalie sempre a resposta final. O agente tem razão ou não?")
 
-        crew = Crew(
+            crew = Crew(
                 agents=[revisor_link],
                 tasks=[analise],
                 process=Process.sequential,  # Processamento sequencial das tarefas
@@ -114,7 +115,7 @@ if option == 'Profile':
              )
         
 
-        if st.button("INICIAR"):
+            if st.button("INICIAR"):
                 inputs = {
                       'profile': 'profile.txt',
                       'profile': file_txt,
@@ -157,9 +158,10 @@ if option == 'Profile':
                             st.error(f"O arquivo Markdown {markdown_file_path} não foi encontrado.")
                     except Exception as e:
                         st.error(f"Erro ao executar o CrewAI: {str(e)}")
-    else:
+        else:
             st.markdown("##### Formato PDF")        
-
+    except:
+        st.error("Verifique o arquivo enviado. Deve ser o profile gerado no Linkedin.")
 if option == 'About':
     robo = Image.open("img/get_profile.png")
     st.sidebar.image(robo,caption="",use_column_width=True)
