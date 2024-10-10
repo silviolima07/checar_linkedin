@@ -116,7 +116,6 @@ if option == 'Profile':
                 process=Process.sequential,  # Processamento sequencial das tarefas
                 verbose=True
              )
-        
 
             if st.button("INICIAR"):
                 inputs = {
