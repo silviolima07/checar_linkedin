@@ -10,3 +10,4 @@ python-dotenv==1.1.0
 streamlit==1.46.0
 setuptools
 wheel
+pysqlite3-binary==0.5.4
