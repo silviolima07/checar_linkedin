@@ -1,102 +1,128 @@
-Contact Luan Oliveira
-www.linkedin.com/in/luanoliveira01 Dados | Crédito | SQL | BI | Gestão | Financeiro | AWS | Negócios |
-(LinkedIn) Tecnologia |
-github.com/luandiego01 (Portfolio) São Paulo, Brasil
-Top Skills
+Contact Silvio Lima
+12 996462527 (Mobile)
+silviolima07@gmail.com Cientista de Dados | Analista de Dados | NLP | Cloud | Python |
+Dataviz | AWS | Practiitioner & Solutions certifications | CrewAI
+www.linkedin.com/in/
+SÃ£o JosÃ© dos Campos, SÃ£o Paulo, Brazil
+silviocesarlima (LinkedIn)
+silviolima07.github.io (Portfolio)
 Summary
-Eficiência operacional
-Doutor em matemática, Especialista em Serviços Financeiros e
-Relatório
-Cientista de dados
-Cobrança de dívida
-Conhecimento em Python, SQL, Power BI, machine learning e deep
+Top Skills
+Portfolio: https://silviolima07.github.io/
+InteligÃªncia de dados
+Web scrap
+Atuei como bolsista no CPQD, onde desenvolvi um Modelo de
+InglÃªs
+AnÃ¡lise de Sentimento Baseado em Aspectos, utilizando tÃ©cnicas de
+Generative AI e NLP.
+Languages
+Espanhol (Limited Working)
+Sigo no momento me aprofundando em Agente Inteligentes com
+InglÃªs (Full Professional)
+CrewAI. Desenvolvendo projetos de agentes que auxiliam em
+diversas Ã¡reas.
 Certifications
-learning, e nos últimos anos, Atualmente trabalho como Especialista
-IBM Machine Learning Specialist -
-Associate em Serviços Financeiros na Allied Brasil.
-Introduction to Generative AI
-Introduction to Large Language Além da experiência com Ciências de dados e Crédito, fui professor
-Models
-de ensino superior de matemática por cinco anos, onde adquiri
-SQL (Advanced)
-experiência e soft skills relacionadas a gestão de pessoas.
-Também possuo experiência em matemática pura, onde estudei por
-muitos anos e tenho artigos publicados na área.
-Com meu background em matemática, experiência em sala de
-aula e estudos, fiz a migração de área para Data Science, onde
-hoje é minha área de atuação, onde procuro trazer soluções para
-problemas de negócio, usando dados, juntamente com matemática,
-estatística, e algumas ferramentas, como Power BI, Python e SQL.
+Big Data Analytics com R e Microsoft
+Certificado como Cloud Practitioner AWS e Solutions Architect
+Azure Machine Learning
+Associate,.
+Big Data Technology Fundamentals
+(Released 2016)
+Analyst Hard skills: Shell Script, Ansible, Git Action, Web Scraping, Power
+Tableau Analyst BI, Streamlit, Python, SQL, Metabase, Machine Learning, NLP e
+Analyst Tableau Estatistica.
+Soft skill: Trabalho em equipe, resiliÃªncia, comunicaÃ§Ã£o eficaz e
+escuta ativa.
+Tenho uma abordagem centrada no cliente, garantindo uma
+comunicaÃ§Ã£o eficiente para compreender suas necessidades e
+oferecer soluÃ§Ãµes precisas
+ConcluÃ­ cursos relevantes como o Bootcamp Multicloud (AWS,
+Azure e GCP) e recentemente Machine Learning na ResidÃªncia
+TecnolÃ³gica PUC Campinas e CPQD.
+Tenho diversos projetos onde aplico Machine Learning, criando
+modelos preditivos, big data, , dashboards, ferramentas AWS,
+anÃ¡lises estatÃ­sticas e visualizaÃ§Ã£o de dados em diferentes
+contextos de necessidades.
+Page 1 of 4
 Experience
-Allied Brasil
-6 months
-Especialista Financeiro - Fiscal e Tributário
-August 2024 - Present (2 months)
-Brasil
-Especialista Ciência de Dados - Serviços Financeiros
-April 2024 - September 2024 (6 months)
-São Paulo, Brasil
-- Trabalho com parceiros de negócios, engenheiros de dados e times de
-tecnologia.
-Page 1 of 3
-- Analise de dados para validar hipóteses e gerar insights de negócio.
-- Manipulação de dados para tratamento, limpeza, exploração e modelagem.
-- Desenvolvimento e manutenção de dashboards e reports de monitoramento.
-- Geração de insights para a atuação da alta gestão
-- Identificação de oportunidades de rentabilização por meio da exploração e
-modelagem de dados.
-Grupo GCB
-2 years 7 months
-Data Science Manager
-March 2023 - March 2024 (1 year 1 month)
-São Paulo, Brasil
-- Apoio a equipe no processo de tomada de decisão estratégica do
-Departamento de Dados|Crédito
-- Utilização de técnica de dados, estatística e machine learning
-- Comunicação de forma efetiva nas revisões de política do portfólio de
-crédito
-- Acompanhamento dos indicadores de inadimplência e rentabilidade
-- Reuniões com as áreas parceiras técnicas e de negócios
-- Treinamento da equipe, formando novos líderes e sucessores
-Líder - Time de dados
-July 2022 - April 2023 (10 months)
-São Paulo, Brasil
-- Implementação de soluções de dados
-- Utilização de ferramentas e plataformas internas de dados e (AWS
-Sagemaker)
-- Mapeamento das principais necessidades de negócio e oportunidades
-relacionadas aos projetos
-- Atuação com metodologias ágeis
-- Desenvolvimento e aprimoramento dos modelos de machine learning,
-seguindo boas práticas
+SoulCode Academy
+Estudante de InteligÃªncia Artificial LLM
+February 2025 - Present (2 months)
+Bootcamp que irÃ¡ apresentar os modelo LLM e projetos reais.
+CPQD
+Bolsista na ResidÃªncia TecnolÃ³gica
+November 2023 - August 2024 (10 months)
+Campinas, SÃ£o Paulo, Brasil
+â€¢ Desenvolvimento de um projeto de AnÃ¡lise de Sentimento Baseada em
+Aspectos.
+â€¢ Aplicando Large Language Models ( LLM) e IA Gen.
+â€¢ Resultados: modelo treinado para detectar termos que identificam produtos
+ou serviÃ§os e os termos que expressam o sentimento do usuÃ¡rio contidos num
+comentÃ¡rio:
+ïƒ¼ Com isso as empresas podem corrigir produtos,
+ïƒ¼ mudar estratÃ©gia aplicada e
+ïƒ¼ descobrir novos mercados em potencial.
+Alelo Brasil
 Cientista de dados
-September 2021 - July 2022 (11 months)
-São Paulo, Brasil
-- Estudos para buscar oportunidades de otimização e melhoria nos produtos
-- Modelagem preditiva para o crescimento da performance e receita dos
-produtos
-- Desenvolvimento de estudos e análises estatísticas de acordo com a
-necessidade do cliente
-Page 2 of 3
-- Criação de modelos de machine learning
-- Mapeamento do funcionamento do negócio busca em melhorias e eficiência
-nos modelos
-UNIESP Centro Universitário
-Professor
-August 2020 - August 2021 (1 year 1 month)
-João Pessoa, Paraíba, Brasil
-Universidade de Brasília
-Professor
-August 2018 - July 2020 (2 years)
-Brasília
-Universidade Católica de Brasília
-Professor mestre
-February 2015 - December 2016 (1 year 11 months)
+July 2021 - April 2022 (10 months)
+SÃ£o Paulo, Brasil
+â€¢ Desenvolvimento de anÃ¡lise de dados para aumento de vendas de produtos
+utilizando a plataforma da AWS;
+â€¢ ExecuÃ§Ã£o de extraÃ§Ã£o de dados de transportadoras no site da internet
+via Web Scrap visando auxiliar um departamento na venda de produtos
+especÃ­ficos.
+â€¢ Resultados:
+ïƒ¼ Aumento de 30% nas vendas de produtos apÃ³s a implementaÃ§Ã£o de um
+modelo de classificaÃ§Ã£o, resultando na segmentaÃ§Ã£o efetiva dos clientes.
+ïƒ¼ Aumento de 40% no cadastro de clientes em potencial.
+GAVB
+Analista de BI Pleno
+June 2021 - August 2021 (3 months)
+ExtraÃ§Ã£o e analise de dados para construÃ§Ã£o de dash com Tableau.
+Page 2 of 4
+Freelance
+AutÃ´nomo
+January 2020 - June 2021 (1 year 6 months)
+IBM Brasil
+Administrador de sistemas Linux Unix
+September 2014 - July 2017 (2 years 11 months)
+Hortolandia
+Suporte ao ambiente Unix (Solaris, HP e AIX) e Linux (Red Hat) de cliente
+internacional.
+Funcate
+Estagiario
+August 2012 - December 2013 (1 year 5 months)
+Parque Tecnologico - SÃ£o JosÃ© dos Campos
+Desenvolvimento de aplicaÃ§Ãµes Web Java e PHP.
+Conhecimentos:
+Oracle, MySQL, Postgres, Javascript, HTML, CSS, Controle de versÃ£o SVN e
+GIT, Eclipse, Netbeans.
+onset
+Analista de Suporte Senior Solaris
+October 2007 - October 2008 (1 year 1 month)
+Administrador dos servidores Solaris e suporte ao usuario.
+OS informatica Ltda
+Analista de Suporte Senior Solaris
+June 1997 - October 2007 (10 years 5 months)
+Treinamentos Solaris e suporte aos clientes.
+Confguracao de ambientes unix e windows.
+Sistemas de backup.
+MC Sistemas e InformAtica
+Analista de Suporte
+October 1992 - June 1997 (4 years 9 months)
+Suporte ao ambiente Unix Solaris e treinamento.
 Education
-Universidade de Brasília
-Doutorado em Matemática, Equações Diferenciais Parciais · (2013 - 2018)
-Universidade Federal da Paraíba
-Mestrado em Matemática, Equações Diferenciais Parciais · (2011 - 2013)
-Universidade Federal da Paraíba
-Licenciatura em Matemática, Análise e Análise Funcional · (2008 - 2011)
-Page 3 of 3
+Soulcode
+Page 3 of 4
+Bootcamp de InteligÃªncia Artificial LLM, Tecnologia Â· (February 2025)
+Universidade de TaubatÃ©
+PÃ³s-graduaÃ§Ã£o Lato Sensu, Tecnologia em Tecnologia da InformaÃ§Ã£o/
+Sistemas da InformaÃ§Ã£o Â· (March 2015 - April 2018)
+Faculdade de Tecnologia de SÃ£o Paulo - FATEC-SP
+Tecnologia em Banco de Dados, Tecnologia da InformaÃ§Ã£o Â· (2011 - 2013)
+Universidade do Vale do ParaÃ­ba
+PÃ³s-graduaÃ§Ã£o Lato Sensu, Engenharia de Software Â· (March
+1995 - December 1997)
+Universidade de TaubatÃ©
+Processamento de Dados, Tecnologia da InformaÃ§Ã£o Â· (1990 - 1992)
+Page 4 of 4

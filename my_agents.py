@@ -1,17 +1,13 @@
 from crewai import Agent
-from crewai_tools import FileReadTool
-#from app import modelo
 import streamlit as st
 
 
-# Ferramenta para leitura de arquivo cv.txt
-#reader_tool = FileReadTool()
-
 # Configuração do agente
+
 
 def criar_agente_revisor(modelo):
     
-    revisor_link = Agent(
+    revisor = Agent(
         role="revisor",
         goal="Usar o arquivo {profile}."
              " Recomendar melhorias no texto do perfil do usuario no linkedin.",
@@ -27,5 +23,7 @@ def criar_agente_revisor(modelo):
         memory=False,
         tools=[]
     )
-    return revisor_link    
+    #st.markdown("#### - Agente Revisor acionado")
+    #st.write(revisor_link.goal)
+    return revisor   
  

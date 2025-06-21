@@ -4,14 +4,31 @@ from crewai import Crew, Process
 from my_agents import criar_agente_revisor
 from my_tasks import criar_task_analise
 from my_tools import save_uploaded_pdf, read_txt
-from config_llm import llama_groq
 import pdfplumber
 import os
 from PIL import Image
 import time
 
 import chardet
+from MyLLM import LLMModels
 
+from dotenv import load_dotenv
+import groq
+
+# Carregar variáveis de ambiente
+load_dotenv()
+
+# Obter a chave da API GROQ
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+
+# Certifique-se de que a chave não é None antes de continuar, se for crítico.
+if GROQ_API_KEY is None:
+    st.error("Erro: A variável de ambiente GROQ_API_KEY não foi carregada. Verifique seu arquivo .env.")
+    st.stop() # Interrompe a execução do Streamlit se a chave não estiver presente
+
+llama_groq = LLMModels.GROQ_LLAMA_70B
 
 
 # Criando o checkbox para mostrar ou não os comandos das tasks
@@ -47,11 +64,12 @@ def extract_text_from_pdf(uploaded_file):
     with pdfplumber.open(uploaded_file) as pdf:
         for page in pdf.pages:
             text_content += page.extract_text() + "\n"
+    #st.write('Text extracted:', text_content)           
     return text_content
 
 # Função para salvar o conteúdo extraído em um arquivo txt
 def save_to_txt(text_content, output_filename="profile.txt"):
-    with open(output_filename, "w", encoding="latin1") as text_file:
+    with open(output_filename, "w", encoding="utf-8") as text_file:
         text_file.write(text_content)
 
 # Função para ler o conteúdo de um arquivo markdown
@@ -69,10 +87,9 @@ html_page_title = """
                """               
 st.markdown(html_page_title, unsafe_allow_html=True)
 
-modelo = llama_groq
 
 robo = Image.open("img/revisor.png")
-st.sidebar.image(robo,caption="",use_column_width=True)
+st.sidebar.image(robo,caption="",use_container_width=True)
 
 st.sidebar.markdown("# Menu")
 option = st.sidebar.selectbox("Menu", ["Profile", 'About'], label_visibility='hidden')
@@ -84,34 +101,38 @@ if option == 'Profile':
         if uploaded_file is not None:
             # Salvar PDF e extrair texto
             
-            save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
+            #save_uploaded_pdf(uploaded_file, 'profile.pdf')  # save pdf
             #st.write("Arquivo lido com sucesso")
         
             # Extrair texto do PDF
             text_content = extract_text_from_pdf(uploaded_file)
+            #st.write('Text extracted:', text_content)
             save_to_txt(text_content, 'profile.txt')  # save txt
-            st.write("Arquivo lido e salvo com sucesso")
+            #st.write("Arquivo lido e salvo com sucesso")
         
             with open("profile.txt", "rb") as f:
                 raw_data = f.read()
         
-
+            #st.write(raw_data)
+            
             result_char = chardet.detect(raw_data)
             encoding = result_char['encoding']
         
             file_txt = read_txt('profile.txt', encoding)
+            
+            #st.markdown("#### Profile lido")
         
         
             # Configuração da crew com o agente recrutador
-            revisor_link = criar_agente_revisor(modelo)
+            revisor = criar_agente_revisor(llama_groq)
             # Cria a task usando o agente criado
-            analise = criar_task_analise(revisor_link)
+            analise = criar_task_analise(revisor)
         
             st.markdown("## Analisar Perfil no Linkedin")   
             st.info("#### Avalie sempre a resposta final. O agente tem razão ou não?")
 
             crew = Crew(
-                agents=[revisor_link],
+                agents=[revisor],
                 tasks=[analise],
                 process=Process.sequential,  # Processamento sequencial das tarefas
                 verbose=True
@@ -141,7 +162,9 @@ if option == 'Profile':
                 
                         # Verificar se o arquivo Markdown existe e exibir
                         try:
+                            
                             markdown_content = read_markdown_file(markdown_file_path)
+                            st.write("--------")
                             st.markdown(markdown_content, unsafe_allow_html=True)
                     
                             # Adicionar botão de download para o arquivo Markdown
