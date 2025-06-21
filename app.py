@@ -15,15 +15,6 @@ from MyLLM import LLMModels
 from dotenv import load_dotenv
 import groq
 
-# --- Adicione estas linhas para forçar o ChromaDB a ser em memória ---
-import chromadb
-# Isso garante que qualquer instância padrão de ChromaDB seja em memória
-# e não tente criar arquivos SQLite persistentes.
-# Se já houver um cliente existente, ele será reutilizado.
-# Caso contrário, um novo cliente em memória será criado.
-_ = chromadb.Client()
-# --- Fim das linhas para forçar o ChromaDB em memória ---
-
 # Carregar variáveis de ambiente
 load_dotenv()
 
