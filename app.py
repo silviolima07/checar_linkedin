@@ -15,10 +15,10 @@ from MyLLM import LLMModels
 from dotenv import load_dotenv
 import groq
 
-__import__('pysqlite3')
-import sys
+#__import__('pysqlite3')
+#import sys
 
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+#sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Carregar variáveis de ambiente
 load_dotenv()
