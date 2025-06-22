@@ -17,7 +17,7 @@ from MyLLM import LLMModels
 os.environ["CREWAI_DISABLE_SQLITE"] = "1"
 
 import sqlite3
-   conn = sqlite3.connect(":memory:")  # Usa SQLite em memória (se possível)
+conn = sqlite3.connect(":memory:")  # Usa SQLite em memória (se possível)
 ########################################
 
 
