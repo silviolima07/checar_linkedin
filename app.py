@@ -12,6 +12,15 @@ import time
 import chardet
 from MyLLM import LLMModels
 
+######################################################
+# Configuração para evitar SQLite (se houver opção)
+os.environ["CREWAI_DISABLE_SQLITE"] = "1"
+
+import sqlite3
+   conn = sqlite3.connect(":memory:")  # Usa SQLite em memória (se possível)
+########################################
+
+
 from dotenv import load_dotenv
 import groq
 
