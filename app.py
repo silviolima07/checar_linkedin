@@ -15,6 +15,8 @@ from MyLLM import LLMModels
 from dotenv import load_dotenv
 import groq
 
+os.environ["CREWAI_DISABLE_SQLITE"] = "1"  # Desativa o SQLite no CrewAI
+
 # Carregar variáveis de ambiente
 load_dotenv()
 
