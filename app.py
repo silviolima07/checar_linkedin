@@ -212,5 +212,4 @@ if option == 'About':
     st.sidebar.image(robo,caption="",use_column_width=True)
     st.markdown("### Este aplicativo faz a leitura do profile do Linkedin em pdf.")
     st.markdown("### Baixe seu profile no botão Mais do seu perfil.")
-    st.markdown("### Um agente revisor faz a leitura e recomenda melhorias nas seções.")
-    st.markdown("### Modelos acessados via Groq.")      
+    st.markdown("### Um agente revisor faz a leitura e recomenda melhorias nas seções.")   
