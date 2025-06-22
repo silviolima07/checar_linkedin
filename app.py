@@ -12,15 +12,6 @@ import time
 import chardet
 from MyLLM import LLMModels
 
-######################################################
-# Configuração para evitar SQLite (se houver opção)
-os.environ["CREWAI_DISABLE_SQLITE"] = "1"
-
-import sqlite3
-conn = sqlite3.connect(":memory:")  # Usa SQLite em memória (se possível)
-########################################
-
-
 from dotenv import load_dotenv
 import groq
 
@@ -171,9 +162,17 @@ if option == 'Profile':
                 
                         # Verificar se o arquivo Markdown existe e exibir
                         try:
+                        
+                            html_page_final = """
+     <div style="background-color:black;padding=60px">
+         <p style='text-align:center;font-size:50px;font-weight:bold'>Resultado da Análise</p>
+     </div>
+               """               
+                            st.markdown(html_page_final, unsafe_allow_html=True)
                             
                             markdown_content = read_markdown_file(markdown_file_path)
-                            st.write("--------")
+                            
+                            
                             st.markdown(markdown_content, unsafe_allow_html=True)
                     
                             # Adicionar botão de download para o arquivo Markdown
