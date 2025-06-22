@@ -9,3 +9,4 @@ groq==0.13.0
 streamlit==1.40.2
 python-dotenv
 pysqlite3-binary
+chardet==5.2.0
