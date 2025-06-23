@@ -210,5 +210,5 @@ if option == 'Profile':
 if option == 'About':
     robo = Image.open("img/get_profile.png")
     st.sidebar.image(robo,caption="",use_column_width=True)
-    st.markdown("### Baixe o profile do seu erfil no Linkedin.")
+    st.markdown("### Baixe o profile do seu perfil no Linkedin.")
     st.markdown("### Um agente revisor faz a análise e recomenda melhorias nas seções.")   
