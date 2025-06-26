@@ -1,3 +1,10 @@
+import sys
+import sqlite3
+
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+
 import pandas as pd
 import streamlit as st
 from crewai import Crew, Process
@@ -14,6 +21,11 @@ from MyLLM import LLMModels
 
 from dotenv import load_dotenv
 import groq
+
+#os.environ["CREWAI_DISABLE_SQLITE"] = "1"  # Desativa o SQLite no CrewAI
+
+#import sqlite3
+#conn = sqlite3.connect(":memory:")  # Usa memória em vez de arquivo
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -198,7 +210,5 @@ if option == 'Profile':
 if option == 'About':
     robo = Image.open("img/get_profile.png")
     st.sidebar.image(robo,caption="",use_column_width=True)
-    st.markdown("### Este aplicativo faz a leitura do profile do Linkedin em pdf.")
-    st.markdown("### Baixe seu profile no botão Mais do seu perfil.")
-    st.markdown("### Um agente revisor faz a leitura e recomenda melhorias nas seções.")
-    st.markdown("### Modelos acessados via Groq.")      
+    st.markdown("### Baixe o profile do seu perfil no Linkedin.")
+    st.markdown("### Um agente revisor faz a análise e recomenda melhorias nas seções.")   
