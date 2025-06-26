@@ -1,7 +1,7 @@
 import sys
 import sqlite3
 
-__import__('pysqlite3')
+#__import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import pandas as pd
