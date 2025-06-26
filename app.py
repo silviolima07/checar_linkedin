@@ -38,6 +38,7 @@ def limpar_markdown(texto_md):
     texto_limpo = texto_limpo.replace('</span>','')
     texto_limpo = texto_limpo.replace('<span style="font-size: 16px;">', '')
     texto_limpo = texto_limpo.replace('<br>', '')
+    texto_limpo = texto_limpo.replace('# Avaliação do Perfil no LinkedIn', '')
     return texto_limpo.strip()
 
 
