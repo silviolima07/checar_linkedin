@@ -57,6 +57,8 @@ load_dotenv()
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 HF_TOKEN = os.getenv('HF_TOKEN')
 
+st.write("HF_TOKEN:",  HF_TOKEN)
+
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 os.environ["HF_TOKEN"] = HF_TOKEN
 
