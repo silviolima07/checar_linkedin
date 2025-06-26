@@ -205,7 +205,7 @@ if option == 'Profile':
     except:
         st.error("Houston, we have a problem. Verifique o arquivo enviado. Deve ser o profile gerado no Linkedin.")
 
-    if 'markdown' in st.session_state:
+    if 'markdown' in st.session_state and uploaded_file is None:
         st.markdown('### Análise do Arquivo por Seções')
         lista_secoes = extrair_secoes(st.session_state['markdown'])
         
