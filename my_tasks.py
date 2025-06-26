@@ -45,6 +45,7 @@ def criar_task_analise(revisor):
              7 - Recomendação da seção Idiomas;
              8 - Recomendação da seção Certificações
              9 - Conhecimentos gerais
+             10 - Sugestões finais
               """
          ,
          agent=revisor,
