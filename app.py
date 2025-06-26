@@ -45,22 +45,30 @@ def extrair_secao(markdown, secao):
     resultado = re.search(padrao, markdown, re.DOTALL | re.IGNORECASE)
     return resultado.group(0).strip() if resultado else None
 
-os.environ.pop("HF_TOKEN", None)
-os.environ.pop("HUGGINGFACE_HUB_TOKEN", None)
+
+HF_TOKEN = st.secrets["HF_TOKEN"]
+os.environ["HF_TOKEN"] = HF_TOKEN
+
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+
+#os.environ.pop("HF_TOKEN", None)
+#os.environ.pop("HUGGINGFACE_HUB_TOKEN", None)
+
 from huggingface_hub import login
 
 warnings.filterwarnings('ignore')
 
 #print('\nCarregar chaves\n')
-load_dotenv()
+#load_dotenv()
 
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')
-HF_TOKEN = os.getenv('HF_TOKEN')
+#GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+#HF_TOKEN = os.getenv('HF_TOKEN')
 
-st.write("HF_TOKEN:",  HF_TOKEN)
+#st.write("HF_TOKEN:",  HF_TOKEN)
 
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
-os.environ["HF_TOKEN"] = HF_TOKEN
+#os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+#os.environ["HF_TOKEN"] = HF_TOKEN
 
 @st.cache_resource(show_spinner="Carregando modelo Kokoro...")
 def carregar_pipeline():
