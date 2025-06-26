@@ -204,7 +204,7 @@ if option == 'Profile':
                     except Exception as e:
                         st.error(f"Erro ao executar o CrewAI: {str(e)}")
         else:
-            st.markdown("##### Formato PDF")        
+            st.write("Formato PDF")        
     except:
         st.error("Houston, we have a problem. Verifique o arquivo enviado. Deve ser o profile gerado no Linkedin.")
 if option == 'About':
