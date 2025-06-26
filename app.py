@@ -138,6 +138,7 @@ if option == 'Profile':
     try:
         st.markdown("## Upload Profile Linkedin")
         uploaded_file = st.file_uploader("Envie o seu profile em PDF", type=["pdf"])
+        markdown_content=None
         if uploaded_file is not None:
             text_content = extract_text_from_pdf(uploaded_file)
             save_to_txt(text_content, 'profile.txt')
