@@ -9,7 +9,7 @@ def criar_task_analise(revisor):
         description=(
             """
              Usar o arquivo profile enviado.
-             Utilize o sistemas ATS (Applicant Tracking Systems) para avaliasr o arquivo enviado.
+             Utilize o sistemas ATS (Applicant Tracking Systems) para avaliar o arquivo enviado.
              
              Numa escala de 0 a 10, onde 0 é a menor importância e 10 a maior importância.  
              Avaliar o arquivo lido e apresentar uma nota.            
