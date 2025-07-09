@@ -85,8 +85,9 @@ def ler_com_kokoro(texto, pipeline):
         partes = textwrap.wrap(texto_limpo, width=800)
         audio_total = []
         for parte in partes:
-            for _, _, audio in pipeline(parte, voice='bf_isabella'):
-                audio_total.append(audio)
+            if not parte.startswith("Relatório"):
+                for _, _, audio in pipeline(parte, voice='bf_isabella'):
+                    audio_total.append(audio)
         audio_concat = torch.cat(audio_total).cpu().numpy()
         sf.write("voz_sugestao.wav", audio_concat, 24000)
         with open("voz_sugestao.wav", "rb") as f:
