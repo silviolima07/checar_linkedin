@@ -214,7 +214,7 @@ if option == 'Profile':
         st.markdown('### Análise do Arquivo por Seções')
         lista_secoes = extrair_secoes(st.session_state['markdown'])
         
-        secao_escolhida = st.selectbox("Escolha a seção para ouvir", lista_secoes)
+        secao_escolhida = st.selectbox("Escolha a seção para ouvir", lista_secoes[1:])
 
         if st.button("🔊 Ouvir Seção Selecionada"):
             secao_texto = extrair_secao(st.session_state['markdown'], secao_escolhida)
