@@ -83,7 +83,7 @@ def ler_com_kokoro(texto, pipeline):
         #st.info("🎧 Gerando áudio com Kokoro, aguarde...")
         texto_limpo = limpar_markdown(texto)
         partes = textwrap.wrap(texto_limpo, width=800)
-        st.write('Partes:', partes)
+        st.write('Avaliação:', partes)
         audio_total = []
         for parte in partes: # O index 0 vem o nome do relatorio e nao seçoes
             if not parte.startswith("Relatório") and not parte.startswith('Avaliação'):
