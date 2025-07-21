@@ -87,7 +87,7 @@ def ler_com_kokoro(texto, pipeline):
         st.write('Avaliação:', partes)
         audio_total = []
         for parte in partes: # O index 0 vem o nome do relatorio e nao seçoes
-            if not parte.startswith("Relatório") and not parte.startswith('Avaliação'):
+            if not parte.startswith("Relatório") and parte != ('Avaliação do Perfil'):
                 for _, _, audio in pipeline(parte, voice='bf_isabella'):
                     audio_total.append(audio)
         audio_concat = torch.cat(audio_total).cpu().numpy()
